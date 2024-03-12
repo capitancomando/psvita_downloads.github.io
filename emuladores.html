@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú con Banner e Imágenes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('wallpaper.gif');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .menu {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .banner {
+            width: 100%;
+            height: 100px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .banner:hover img {
+            transform: scale(1.1);
+        }
+
+        .image-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .image-buttons a {
+            flex-basis: calc(33.33% - 10px);
+            margin-bottom: 20px;
+            text-decoration: none;
+        }
+
+        .image-buttons img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-buttons img:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+            margin-bottom: 20px;
+        }
+
+        #searchContainer {
+            margin-bottom: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        #searchInput {
+            width: calc(100% - 40px);
+            padding: 10px;
+            padding-left: 40px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            background-color: #333333;
+            color: #ffffff;
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) inset;
+        }
+
+        #searchIcon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaaaaa;
+        }
+
+        .romList {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .romItem {
+            width: calc(50% - 20px);
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: transparent;
+            box-shadow: none;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+            max-height: 300px;
+        }
+
+        .romItem img {
+            width: 120px;
+            height: 160px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .romItem .title {
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 5px;
+            text-shadow: 0 0 5px #00ff00;
+            max-width: 100%;
+        }
+
+        .romItem .description {
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .romItem .downloadButton {
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-size: 14px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            color: #00ff00;
+            background-color: #007bff;
+        }
+
+        .romItem .downloadButton:hover {
+            background-color: #0056b3;
+        }
+
+        @media screen and (max-width: 768px) {
+            .romItem {
+                width: calc(50% - 20px);
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <div class="banner">
+        <img src="images/banner.jpg" alt="Banner">
+    </div>
+    <div class="image-buttons">
+        <a href="link_a_novedad"><img src="images/inicio.jpg" alt="Novedad"></a>
+        <a href="link_a_descargas"><img src="images/informacion.jpg" alt="Descargas"></a>
+        <a href="link_a_emuladores"><img src="images/emuladores.jpg" alt="Emuladores"></a>
+        <a href="link_a_contactame"><img src="images/contactame.jpg" alt="Contactame"></a>
+    </div>
+</div>
+
+
+</body>
+</html>
